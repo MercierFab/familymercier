@@ -16,8 +16,8 @@
                 <nav>
                     <ul>
                         <li><a href="index.php">Accueil</a></li>
-                        <li><a href="page1.php">Page 1</a></li>
-                        <li><a href="phpinfo.php">Php info</a></li>
+                        <li><a href="statique.php">Page 1</a></li>
+                        <li><a href="phpinfo.php">PhpInfo</a></li>
                         <li><a href="#">...</a></li>
                     </ul>
                 </nav>

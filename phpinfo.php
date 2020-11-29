@@ -6,7 +6,7 @@
         <title>php info</title>
     </head>
     <body>
-    <<?php phpinfo();?>	
+    <<?php phpinfo(;?>	
 
 
     </body>
