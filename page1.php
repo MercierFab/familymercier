@@ -15,8 +15,8 @@
                 </div>
                 <nav>
                     <ul>
-                        <li><a href="index.html">Accueil</a></li>
-                        <li><a href="page1.html">Page 1</a></li>
+                        <li><a href="index.php">Accueil</a></li>
+                        <li><a href="page1.php">Page 1</a></li>
                         <li><a href="#">Page 2</a></li>
                         <li><a href="#">...</a></li>
                     </ul>
@@ -30,7 +30,7 @@
             <h2>affichage de texte avec PHP</h2>
             <p>
                 Cette ligne est écrite en HTML.<br>
-                <? echo "celle ci est écrite enn PHP."; ?>
+                <?php echo "ligne écrite en PHP."; ?>
 
             </p>
 
@@ -38,6 +38,8 @@
             <p><img src="images/anni.gif" class="imageflottante" 
             alt="Image flottante" height="100" width="100"/> 
         
+            un texte pour voir 
+            <?php echo "ligne écrite en PHP."; ?>
             In June, Diane visited her friends who live in San Francisco, California. This was Diane’s first time in the city, and she enjoyed her opportunities to walk around and explore.
 
             On the first day of her trip, Diane visited the Golden Gate Bridge. This red suspension bridge measures 1.7 miles in length. Diane and her friends did not walk across the bridge. However, they viewed it from the Golden Gate National Recreation Area, which offers hiking trails, picnicking areas, and presents spectacular views of the bridge and city. Diane and her friends made sure to take a group photograph here, featuring the bridge in the background.
