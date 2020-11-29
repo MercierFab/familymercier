@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <!-- Site familymercier.com commencé le 7 novembre 2020 par Fabrice Mercier
-L'objectif est purement pédagogique et de passer du site statique auu site dynamique --> 
+L'objectif est purement pédagogique et de passer du site statique auu site dynamique
+nouvelle version V.2 en PHP --> 
 <html lang="fr">
     <head>
         <meta charset="utf-8" />
@@ -64,7 +65,7 @@ L'objectif est purement pédagogique et de passer du site statique auu site dyna
         
             <footer>
                 <div id="miseAjour">
-                    <p>Dernière mise à jour <br/>le 28 novembre 2020<br />
+                    <p>V2 <br/>le 29 novembre 2020<br />
                     <a href="#">Me contacter !</a></p>
                 </div>
                 <div id="mes_photos">
