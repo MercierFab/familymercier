@@ -22,7 +22,7 @@ nouvelle version V.2 en PHP -->
                     <ul>
                         <li><a href="index.php">Accueil</a></li>
                         <li><a href="page1.php">Page 1</a></li>
-                        <li><a href="#">Page 2</a></li>
+                        <li><a href="phpinfo.php">Php info</a></li>
                         <li><a href="#">...</a></li>
                     </ul>
                 </nav>
@@ -65,7 +65,7 @@ nouvelle version V.2 en PHP -->
         
             <footer>
                 <div id="miseAjour">
-                    <p>V2 <br/>le 29 novembre 2020<br />
+                    <p>V2 du 29/11/20<br />
                     <a href="#">Me contacter !</a></p>
                 </div>
                 <div id="mes_photos">

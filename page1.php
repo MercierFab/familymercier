@@ -17,7 +17,7 @@
                     <ul>
                         <li><a href="index.php">Accueil</a></li>
                         <li><a href="page1.php">Page 1</a></li>
-                        <li><a href="#">Page 2</a></li>
+                        <li><a href="phpinfo.php">Php info</a></li>
                         <li><a href="#">...</a></li>
                     </ul>
                 </nav>
@@ -48,6 +48,7 @@
 
             Diane and her friends spent the final day of her vist in San Francisco’s downtown area. Diane’s favorite part of her entire trip was taking a trolley to transport her up and down the hilly streets of San Francisco. Diane did a lot of shopping downtown on her last day. She and her friends celebrated the end of her visit by having dinner at one of San Francisco’s best restaurants.</p>
             <audio src="images/Applau.mp3" controls>message si marche pas</audio>
+            <p>Aujourd'hui nous sommes le <?php echo date('d/m/Y h:i'); ?>.</p>
 
             </article>
             <aside>
