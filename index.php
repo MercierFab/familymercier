@@ -18,14 +18,7 @@ nouvelle version V.2 en PHP -->
                         <a href="FamilyMercier.com">familymercier.com</a>
                     </div>
                 </div>
-                <nav>
-                    <ul>
-                        <li><a href="index.php">Accueil</a></li>
-                        <li><a href="statique.php">Page 1</a></li>
-                        <li><a href="phpinfo.php">PhpInfo</a></li>
-                        <li><a href="#">...</a></li>
-                    </ul>
-                </nav>
+                <?php include("menu.php"); ?>
             </header>
         
             <div id="banniere_image">

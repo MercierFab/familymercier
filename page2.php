@@ -8,32 +8,59 @@
 
     <body>
         <header>
-                <div id="titrePrincipal">
-                    <div id="logo">
-                        <h1>Mon Super site - page Statique</h1>
-                    </div>
+            <div id="titrePrincipal">
+                <div id="logo">
+                <h1>Mon Super site - page Dynamique</h1>
                 </div>
-                <?php include("menu.php"); ?>
+            </div>
+
+            <!-- mettre le menu ici -->
+            <?php include("menu.php"); ?>
+
+
         </header>
         <br>
         
         <section>
             <article>
 
-            <h2>A traduire pour demain</h2>
-            <p><img src="images/anni.gif" class="imageflottante" 
-            alt="Image flottante" height="100" width="100"/> 
-        
+            <h2>affichage de texte avec PHP</h2>
+            <p>
+                Cette ligne est écrite en HTML.<br>
+                <?php echo "ligne écrite en PHP."; ?>
+
+            </p>
+
+            <h2>calculs PHP</h2>
+            <p>
+                <?php
+                $ageDuVisiteur = 10;
+                echo 'age du visiteur = ';
+                $NomDuVisiteur = "c'est moi <br>";
+                echo $ageDuVisiteur;
+                echo $NomDuVisiteur;
+
+
+                $coordonnees = array (
+                'prenom' => 'François',
+                'nom' => 'Dupont',
+                'adresse' => '3 Rue du Paradis',
+                'ville' => 'Marseille');
+                $coordonnees = array (
+                'prenom' => 'Sophie',
+                'nom' => 'Durand',
+                'adresse' => '3 allee de la gare',
+                'ville' => 'Meylan');
+
+                foreach($coordonnees as $cle => $element)
+                {
+                echo '[' . $cle . '] vaut ' . $element . '<br />';
+                }
+                ?>
+
+            </p>
             
-            In June, Diane visited her friends who live in San Francisco, California. This was Diane’s first time in the city, and she enjoyed her opportunities to walk around and explore.
-
-            On the first day of her trip, Diane visited the Golden Gate Bridge. This red suspension bridge measures 1.7 miles in length. Diane and her friends did not walk across the bridge. However, they viewed it from the Golden Gate National Recreation Area, which offers hiking trails, picnicking areas, and presents spectacular views of the bridge and city. Diane and her friends made sure to take a group photograph here, featuring the bridge in the background.
-
-            The next day, Diane and her friends visited Alcatraz Island. This island is located 1.25 miles offshore in the San Francisco Bay. It used to serve as a lighthouse, military fort, and prison. Diane and her friends took a small tour boat across bay to reach the island. Their visit included a guided tour through the old military base and prison. They also took a walk around the island to appreciate some of the native wildlife in addition to the views of the city.
-
-            Diane and her friends spent the final day of her vist in San Francisco’s downtown area. Diane’s favorite part of her entire trip was taking a trolley to transport her up and down the hilly streets of San Francisco. Diane did a lot of shopping downtown on her last day. She and her friends celebrated the end of her visit by having dinner at one of San Francisco’s best restaurants.</p>
-            <audio src="images/Applau.mp3" controls>message si marche pas</audio>
-            
+            <p>Aujourd'hui nous sommes le <?php echo date('d/m/Y h:i'); ?>.</p>
 
             </article>
             <aside>
@@ -69,11 +96,11 @@
                     <br><br>
                 <input type="submit" name="envoyer">
             </form>
-            <video src="images/Kitten.mp4" controls poster="images/kitten.png" width="200"></video>
             </aside>
         </section>
-        <!-- pied de page commun-->
+        
+        <!-- pied de page commun aux autres pages sauf le sommaire --> 
         <?php include("piedDePage.php"); ?>
-
+    
     </body>
 </html>
