@@ -1,3 +1,7 @@
+<?php 
+session_start();
+?>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -26,13 +30,15 @@
 
             <h2>affichage de texte avec PHP</h2>
             <p>
-                Cette ligne est écrite en HTML.<br>
-                <?php echo "ligne écrite en PHP."; ?>
+                test php<br>
 
             </p>
-
-            <h2>calculs PHP</h2>
             <p>
+                
+                <?php echo $_POST['pseudo']; ?> 
+                <br>
+                <?php echo $_POST['pass']; ?>
+                <br>
                 <?php
                 $ageDuVisiteur = 10;
                 echo 'age du visiteur = ';
@@ -94,11 +100,12 @@
                         </optgroup>
                     </select>
                     <br><br>
+
                 <input type="submit" name="envoyer">
             </form>
             </aside>
         </section>
-        
+
         <!-- pied de page commun aux autres pages sauf le sommaire --> 
         <?php include("piedDePage.php"); ?>
     

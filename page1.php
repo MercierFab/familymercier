@@ -1,3 +1,6 @@
+<?php 
+session_start();
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -20,7 +23,7 @@
         <section>
             <article>
 
-            <h2>A traduire pour demain</h2>
+            <h2>A traduire pour demain <?php echo $_COOKIE['pseudo']; ?></h2>
             <p><img src="images/anni.gif" class="imageflottante" 
             alt="Image flottante" height="100" width="100"/> 
         
@@ -33,16 +36,27 @@
 
             Diane and her friends spent the final day of her vist in San Francisco’s downtown area. Diane’s favorite part of her entire trip was taking a trolley to transport her up and down the hilly streets of San Francisco. Diane did a lot of shopping downtown on her last day. She and her friends celebrated the end of her visit by having dinner at one of San Francisco’s best restaurants.</p>
             <audio src="images/Applau.mp3" controls>message si marche pas</audio>
-            
+            <!-- à revoir plus tard
+            <form action="cible_envoi.php" method="post" enctype="multipart/form-data">
+                <p>
+                Formulaire d'envoi de fichier :<br />
+                <input type="file" name="monfichier" /><br />
+                <input type="submit" value="Envoyer le fichier" />
+                </p>
+            </form> -->
+            <pre>
+                <?php
+                print_r($_FILE);
+                ?>
+            </pre>
 
             </article>
             <aside>
             <form method="post" action="traitement.php">
-                    <label for="pseudo">Votre pseudo</label>
-                    <input type="text" name="pseudo" id="pseudo" placeholder="Ex : Zozor" size="30" maxlength="10" autofocus />
-                    <br>
-                    <label for="pass">   mot de passe</label>
-                    <input type="password" name="pass" id="pass" size="30" maxlength="10"/>
+                    <br /><br />
+                    Bonjour <?php echo $_GET['nom']; ?><br>
+                    <!-- Message qui vient de Traitement.php : <?php echo $_POST['message2']; ?> ne fonctionne pas pourquoi ??? -->
+
                     <br /><br />
                     <textarea class="boiteTrad" name="traduction" id="traduction">tu peux écrire la traduction ici (te toute façon ça ne sert à rien pour l'instant)</textarea>
                     <br /><br />

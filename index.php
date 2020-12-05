@@ -1,6 +1,12 @@
+<?php 
+session_start();
+$_SESSION['nom'] = 'MERCIER';
+/*setcookie('pseudo','à venir', time() + 365*24*3600, null, null, false, true);*/
+?>
+
 <!DOCTYPE html>
 <!-- Site familymercier.com commencé le 7 novembre 2020 par Fabrice Mercier
-L'objectif est purement pédagogique et de passer du site statique auu site dynamique
+L'objectif est purement pédagogique et de passer du site statique au site dynamique
 nouvelle version V.2 en PHP --> 
 <html lang="fr">
     <head>
@@ -18,7 +24,8 @@ nouvelle version V.2 en PHP -->
                         <a href="FamilyMercier.com">familymercier.com</a>
                     </div>
                 </div>
-                <?php include("menu.php"); ?>
+                <!-- le menu est retiré pour ne donner acces au site que par connexion -->
+                <!-- <?php in//lude("menu.php"); ?> -->
             </header>
         
             <div id="banniere_image">
@@ -32,7 +39,7 @@ nouvelle version V.2 en PHP -->
             <section><!-- Section 2 je suis un grand voyageur-->    
                 <article>
                 
-                    <h1><img src="images/logoV.png" alt="logo V" width="50" height="50" class="ico_categorie" />Je suis un grand voyageur</h1>
+                    <h1><img src="images/logoV.png" alt="logo V" width="50" height="50" class="ico_categorie" />Je suis un grand voyageur </h1>
 
                     <?php echo "ligne écrite en PHP."; ?>
 
@@ -44,16 +51,20 @@ nouvelle version V.2 en PHP -->
 
                 </article>
                 <aside>
-                    <h1>À propos de l'auteur</h1>
-                        <img src="images/bulle.png" alt="" id="fleche_bulle" />
-                        <p id="photo_zozor">
-                        <img src="images/zozor.png" alt="Photo de zozor"/>
-                        </p>
-                        <p>Laissez moi le temps de me présenter : je m'apelle zozor, je suis né le 23 novembre 1965.</p>
-                        <p>vous savez tout sur moi</p>
-                        <!--
-                        <p><img src="facebook.png" alt="Facebook" /><img src="images/twitter.png" alt="Twitter" /><img src="images/vimeo.png" alt="Vimeo" /><img src="images/flickr.png" alt="Flickr" /><img src="images/rss.png" alt="RSS" /></p>-->
-                </aside>
+                    <h1>Connectez-vous<br>
+                        <?php echo $_COOKIE['pseudo']; ?></h1>
+                        <!-- Objectif : se connecter à la page 1 qui contient le menu que si l'identifiant est manon/maeva/noemie/marie/fabrice et le mot de passe correspondant au prenom. Si c'est pas bon la page 1 renvoie à l'index avec un message "identifiant ou mot de passe inconnu" -->
+                    <form method="post" action="traitement.php">
+                    <label for="pseudo">votre pseudo</label><br>
+                    <input type="text" name="pseudo" id="pseudo" placeholder="fabrice" size="30" maxlength="10" autofocus />
+                    <br><br><br>
+                    <label for="pass">mot de passe</label><br>
+                    <input type="password" name="pass" id="pass" size="30" maxlength="10"/><br><br>
+                    
+                <input type="submit" name="envoyer"><br>
+            </form>
+
+            </aside>
             </section>
         
             <footer>
