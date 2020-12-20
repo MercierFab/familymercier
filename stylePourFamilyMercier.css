@@ -353,9 +353,20 @@ footer h1
     left: 100px;
 }
 
+/* pour le tableau de la piscine */
+td, th
+{
+    border: 1px solid;
+}
 
-
-
+table
+{
+    border-collapse: collapse;/* les bordures du tableau sont collées */
+    font-size: 0.9em;
+    color: black;
+    table-layout: fixed;
+    text-align: center;
+}
 
 
 

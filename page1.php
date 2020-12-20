@@ -45,9 +45,7 @@ session_start();
                 </p>
             </form> -->
             <pre>
-                <?php
-                print_r($_FILE);
-                ?>
+                
             </pre>
 
             </article>

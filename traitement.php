@@ -50,7 +50,7 @@ session_start();
 
 	if ($okConnection) {
 			
-			header('location:page1.php?nom=' . $nom);
+			header('location:page1.php?nom=' . $nom . ';passage=\'getDeTraitement\'');
 			exit();
 		} else {
 			echo "pas le bon identifiant > retour index";

@@ -1,7 +1,9 @@
 <?php 
 session_start();
 $_SESSION['nom'] = 'MERCIER';
-/*setcookie('pseudo','à venir', time() + 365*24*3600, null, null, false, true);*/
+setcookie('pseudo','à venir', time() + 365*24*3600, null, null, false, true);
+setcookie('TablePiscine','pasInterroge', time() + 365*24*3600, null, null, false, true);
+
 ?>
 
 <!DOCTYPE html>
