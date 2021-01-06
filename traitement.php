@@ -1,6 +1,5 @@
 <?php 
 session_start();
-/*setcookie('pseudo', $nom, time() + 365*24*3600, null, null, false, true);*/
 ?>
 
 <!DOCTYPE html>
@@ -10,12 +9,23 @@ session_start();
         <link rel="stylesheet" href="stylePourFamilyMercier.css" />
         <title>traitement php</title>
     </head>
-	<p>
-                
+	<p>Si vous voyez cette page c'est que vous n'avez pas le bon pseudo ou le bon mot de passe</p>
+
+    <p>            
         <?php echo 'pseudo entré : ' . $_POST['pseudo']; ?> 
         <br>
         <?php echo 'mot de passe entré : ' . $_POST['pass']; ?>
         <br>
+        <p>
+        Liste des nouvelles fonctions à venir<br>
+        - donner la possibilité de laisser un commentaire (base de donnée messagerie)<br>
+        - tableau de données piscine et filtres joints<br>
+        - créer l'onglet LoraWan en lien avec un capteur<br>
+        - ...<br>
+
+
+        </p>
+
 
 	</p>
 	<!-- Je vais vérifier que le pseudo et le mot de passe existent dans une table avec correspondance, un pseudo avec en face le pass qui sera par défaut avec la même valeur. Et si je touve une correspondance j'envoie vers page 1. Si non retour à l'index avec un message "pseudo ou mot de passe inconnu" - Je renforcerai la sécurité dans un second temps  -->
@@ -30,13 +40,13 @@ session_start();
 	echo '<p>Cette page a été ouverte ' . $pages_vues . ' fois </p>';
 
 
-	$TablePseudo = array('manon','maeva','noemie','marie','fabrice');
-	$TablePass = array('manon','maeva','noemie','marie','fabrice');
+	$TablePseudo = array('fabrice');
+	$TablePass = array('fabrice');
 	$okConnection = false;
 
 	echo "liste des pseudos et mots de passes autorisés : <br>";
 
-	for ($numero = 0; $numero < 5; $numero++)
+	for ($numero = 0; $numero < 1; $numero++)
 		{
     	echo $TablePseudo[$numero] . '  ' . $TablePass[$numero] . '<br />';
     	
@@ -50,10 +60,11 @@ session_start();
 
 	if ($okConnection) {
 			
-			header('location:page1.php?nom=' . $nom . ';passage=\'getDeTraitement\'');
+			header('location:Indicateurs.php');
 			exit();
 		} else {
-			echo "pas le bon identifiant > retour index";
+			echo "retourner à l'accueil pour recommencer la connexion <br /><br />";
+			echo "<li><a href=\"index.php\">Accueil</a></li>";
 			exit();
 		}
 

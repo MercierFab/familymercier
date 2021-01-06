@@ -2,7 +2,6 @@
 session_start();
 $_SESSION['nom'] = 'MERCIER';
 setcookie('pseudo','à venir', time() + 365*24*3600, null, null, false, true);
-setcookie('TablePiscine','pasInterroge', time() + 365*24*3600, null, null, false, true);
 
 ?>
 
@@ -26,8 +25,7 @@ nouvelle version V.2 en PHP -->
                         <a href="FamilyMercier.com">familymercier.com</a>
                     </div>
                 </div>
-                <!-- le menu est retiré pour ne donner acces au site que par connexion -->
-                <!-- <?php in//lude("menu.php"); ?> -->
+                
             </header>
         
             <div id="banniere_image">
@@ -41,14 +39,16 @@ nouvelle version V.2 en PHP -->
             <section><!-- Section 2 je suis un grand voyageur-->    
                 <article>
                 
-                    <h1><img src="images/logoV.png" alt="logo V" width="50" height="50" class="ico_categorie" />Je suis un grand voyageur </h1>
+                    <h1><img src="images/logoV.png" alt="logo V" width="50" height="50" class="ico_categorie" />Un site pédagogique</h1>
 
-                    <?php echo "ligne écrite en PHP."; ?>
 
-                        <p>Blabla de la section 2 . blablabla   bla mmmmmmmmm bbbbbbb rerthrghfh lkelaeer iueurhgkeairura regherg erfoirij djiuzf gueorgkaer gerjgeajgj regajghkerh gjh gjjhgerugh rgjo gaergjaap egjgouhgaojlrjgpi rrghougo fjrhgohghf ncbvjgvayf&tgaehgoivà(i jejgogoaeg riggoginrgooerj kgegjotaprhhrj ldgjreuyou ljglezeu' dkhfurgg ghayryt&"jg erjggh</p>
-                        <p>sdfjhdfkv  djv nzefjoc  df nf iusdf iuef s  soyf vgsugdg dkuy dvv sd dfyv  ivdosfyo  fpdhs vdyf zouy zuvyoufyv sydgf idf vusygfudyy iuyvuc  sdfyfy iuvy iyf isydgc udgf izyfiezygc d siyfu sdcg seuf zuyeg czudys  eygusgv qvc oaergyoyv  ouq yoYE OYUVD uydsguzgvae vyfvkGSKDVQEGVYY SgdkzUQYEFAK"YEKDS</p>
-                        <p>blablabla   bla mmmmmmmmm bbbbbbb rerthrghfh lkelaeer iueurhgkeairura regherg erfoirij djiuzf gueorgkaer gerjgeajgj regajghkerh gjh gjjhgerugh rgjo gaergjaap egjgouhgaojlrjgpi rrghougo fjrhgohghf ncbvjgvayf&tgaehgoivà(i jejgogoaeg riggoginrgooerj kgegjotaprhhrj ldgjreuyou ljglezeu' dkhfurgg ghayryt&"jg erjggh
-                        </p>
+                        <p>L'objectif est de tester les langages et méthodes qui permettent de faire vivre un site Internet interactif. </p>
+                        <p>Pour commencer le HTML et CSV pour l'affichage et la mise en page. Puis le PHP, SQL et Python pour travailler les données et rendre le site interessant.</p>
+                        <p>L'objectif ultime est d'alimenter une base de données directement par un capteur accessible par le réseau LORAWan. Le tout hébergé sur un serveur et accessible depuis n'importe quel ordinateur.</p>
+                        <p>Sans oublier la dose de sécurité indispensable.</p>
+                        <p>L'ensemble des programmes est disponible sur Github.</p>
+                        <p>Les données utilisées sont celles d'une piscine.</p> 
+                        <p>En attendant des règles de sécurité plus strictes, vous pouvez utiliser le pseudo fabrice et mot de passe fabrice pour vous connecter.</p>
                     
 
                 </article>
@@ -68,40 +68,9 @@ nouvelle version V.2 en PHP -->
 
             </aside>
             </section>
+
+             <?php include("footer.php"); ?>
         
-            <footer>
-                <div id="miseAjour">
-                    <p>V2 du 29/11/20<br />
-                    <a href="#">Me contacter !</a></p>
-                </div>
-                <div id="mes_photos">
-                    <h1>Mes photos</h1>
-                        <p>
-                        <img src="images/photo1.jpeg" alt="logo V" width="100" height="100" class="mesPhotos" />
-                        <img src="images/photo2mini.jpeg" alt="logo V" width="100" height="100" class="mesPhotos" />
-                        <img src="images/photo3mini.jpeg" alt="logo V" width="100" height="100" class="mesPhotos" />
-                        <img src="images/photo4mini.jpeg" alt="logo V" width="100" height="100" class="mesPhotos" />
-                        </p>    
-                    
-                </div>
-                <div id="Recommandes"> <!-- = mes_amis -->
-                    <h1>Sites recommandés</h1>
-                        <div id="listeSites"> <!-- = listes_amis -->
-                        <ul>    
-                            <li><a href="#">site1</a></li>
-                            <li><a href="#">site2</a></li>
-                            <li><a href="#">site3</a></li>
-                            <li><a href="#">site4</a></li>    
-                        </ul>
-                        <ul>
-                            <li><a href="#">site5</a></li>
-                            <li><a href="#">site6</a></li>
-                            <li><a href="#">site7</a></li>
-                            <li><a href="#">site8</a></li>
-                        </ul>
-                    </div> 
-                </div>
-            </footer>
         </div>
     </body>
 </html>

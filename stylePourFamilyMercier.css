@@ -362,7 +362,7 @@ td, th
 table
 {
     border-collapse: collapse;/* les bordures du tableau sont collées */
-    font-size: 0.9em;
+    font-size: 0.3em;
     color: black;
     table-layout: fixed;
     text-align: center;
