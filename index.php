@@ -13,7 +13,7 @@ nouvelle version V.2 en PHP -->
     <head>
         <meta charset="utf-8" />
         <link rel="stylesheet" href="stylePourFamilyMercier.css" />
-        <title>FamilyMercier.com</title>
+        <title>FamilyMercier.com menu principal</title>
     </head>
 
     <body>

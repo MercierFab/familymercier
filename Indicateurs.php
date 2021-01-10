@@ -6,7 +6,7 @@ session_start();
     <head>
         <meta charset="utf-8" />
         <link rel="stylesheet" href="stylePourFamilyMercier.css" />
-        <title>Indicateurs</title>
+        <title>familymercier.com Indicateurs</title>
     </head>
 
     <body>

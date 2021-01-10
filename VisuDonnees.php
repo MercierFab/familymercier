@@ -4,7 +4,7 @@
     <head>
         <meta charset="utf-8" />
         <link rel="stylesheet" href="stylePourFamilyMercier.css" />
-        <title>Données</title>
+        <title>familymercier.com données</title>
     </head>
     <header>
         <div id="titrePrincipal">
@@ -24,7 +24,17 @@
 		{
 			// On se connecte à MySQL - test = nom de la base - root l'utilisateur - Los.. le mot de passe - array... pour avoir les erreurs en retour - PDO est un mode de connection universel
 			
-			$bdd = new PDO('mysql:host=localhost;dbname=FamilyMercier;charset=utf8', 'root', 'Loslos!38', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
+			
+			//$bdd = new PDO('mysql:host=sql151.main-hosting.eu;dbname=u477330510_familymercier;charset=utf8', 'u477330510', 'ZozoEstParti76', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
+			//$bdd = new PDO('mysql:host=sql151.main-hosting.eu;dbname=u477330510_familymercier;charset=utf8', 'u477330510', 'LukkasParis75', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
+
+			// ok en local : $host = 'localhost'; $dbname = 'FamilyMercier'; $username = 'root'; $password = 'Loslos!38';
+			// NOK $host = '185.224.137.151'; $dbname = 'u477330510_familymercier'; $username = 'u477330510'; $password = 'LukkasParis75';
+
+			$host = 'localhost'; $dbname = 'FamilyMercier'; $username = 'root'; $password = 'Loslos!38';
+			$bdd = new PDO("mysql:host=$host;dbname=$dbname" , $username, $password);
+			$bdd->setAttribute(PDO::ATTR_ERRMODE , PDO::ERRMODE_EXCEPTION);
+
 		}
 		// le bloc try essaye d'ouvrir la base et rentre dans le bloc catch en cas de problème
 		catch(Exception $e)
