@@ -23,6 +23,7 @@
 		try
 		{
 			// On se connecte à MySQL - test = nom de la base - root l'utilisateur - Los.. le mot de passe - array... pour avoir les erreurs en retour - PDO est un mode de connection universel
+			
 			$bdd = new PDO('mysql:host=localhost;dbname=FamilyMercier;charset=utf8', 'root', 'Loslos!38', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
 		}
 		// le bloc try essaye d'ouvrir la base et rentre dans le bloc catch en cas de problème
@@ -65,7 +66,7 @@
 		$reponse->closeCursor(); // Termine le traitement de la requête
 		?>	
     </body>
-    
+
 </html>
 
 

@@ -6,7 +6,7 @@ session_start();
     <head>
         <meta charset="utf-8" />
         <link rel="stylesheet" href="stylePourFamilyMercier.css" />
-        <title>Page 1 - FamilyMercier</title>
+        <title>Indicateurs</title>
     </head>
 
     <body>
@@ -32,7 +32,9 @@ session_start();
             </p>
 
             <?php
+            // acces à la base sur l'ordi
             try{$bdd = new PDO('mysql:host=localhost;dbname=FamilyMercier;charset=utf8', 'root', 'Loslos!38', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));}
+            
             catch(Exception $e){die('Erreur : '.$e->getMessage());}
             
             // Présentation des variations de température
