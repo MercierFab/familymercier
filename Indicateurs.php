@@ -32,10 +32,7 @@ session_start();
             </p>
 
             <?php
-            // acces à la base sur l'ordi
-            try{$bdd = new PDO('mysql:host=localhost;dbname=FamilyMercier;charset=utf8', 'root', 'Loslos!38', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));}
-            
-            catch(Exception $e){die('Erreur : '.$e->getMessage());}
+            include("ConnexionSQL.php");
             
             // Présentation des variations de température
 
