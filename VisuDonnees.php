@@ -14,7 +14,7 @@
         </div>
         </div>
     
-        <?php include("ConnexionSQL.php"); ?>
+        <?php include("menu.php"); ?>
     
     </header>
 	<body>
