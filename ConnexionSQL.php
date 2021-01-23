@@ -1,20 +1,22 @@
-<!-- Paramètres de connection à la base de données -->
+<!-- Connection à la base de données mercierfamily sur le serveur hostinger -->
 
 <?php
 
 // Connexion à la base SQL du serveur utilisé pour le site familymercier.com
-// Il faut pour l'instant paramétrer manuellement le host en attendant le IF qui va bien
+// la base de données du serveur hostinger est accessible depuis l'ordi pour les tests
+// il faut juste indiquer  $host = 'localhost' pour le serveur
+// attention de bien autoriser "n'imprte quel hôte" dans hostinger my sql à distance
+// l'IP change derrière la BOX
+
 
 try
 		{
-
 		// pour le serveur
 		//$host = 'localhost'; 
 
-		// pour l'ordi
+		//pour l'ordi 
 		$host = 'sql151.main-hosting.eu'; 
 
-		// paramètres communs à l'ordi et au serveur
 		$dbname = 'u477330510_familymercier'; 
 		$username = 'u477330510_familymercier'; 
 		$password = 'ZozoEstParti76';

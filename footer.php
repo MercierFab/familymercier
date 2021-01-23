@@ -1,11 +1,13 @@
-<!-- le pied de page -->
+<!-- pied de page du site familymercier.com il est commun à toutes les pages -->
 
 
 			<footer>
                 <div id="miseAjour">
-                    <p>V3 du 04/01/21<br />
+                    <p>V3.01 du 23/01/21<br />
                     <!-- faire ici un lien pour laisser un commentaire -->
-                    <a href="#">fonction à venir</a></p>
+                    <a href="minichat.php">Laissez un message</a><br>
+                    <a href="minichat_failleXSS.php">Laissez un message (faille XSS)</a>
+                    </p>
 
                 </div>
                 <div id="mes_photos">

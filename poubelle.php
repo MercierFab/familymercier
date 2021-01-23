@@ -34,6 +34,11 @@
 			//$bdd = new PDO('mysql:host=localhost;dbname=FamilyMercier;charset=utf8', 'root', 'Loslos!38', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
 
 			// celui qui fonctionne en local
+			//$bdd = new PDO('mysql:host=sql151.main-hosting.eu;dbname=u477330510_familymercier;charset=utf8', 'u477330510', 'ZozoEstParti76', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
+			//$bdd = new PDO('mysql:host=sql151.main-hosting.eu;dbname=u477330510_familymercier;charset=utf8', 'u477330510', 'LukkasParis75', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
+
+			// ok en local : $host = 'localhost'; $dbname = 'FamilyMercier'; $username = 'root'; $password = 'Loslos!38';
+			// NOK $host = '185.224.137.151'; $dbname = 'u477330510_familymercier'; $username = 'u477330510'; $password = 'LukkasParis75';
 
 
 ?>
