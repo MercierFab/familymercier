@@ -1,6 +1,3 @@
-<?php 
-session_start();
-?>
 
 <!DOCTYPE html>
 <html>
@@ -18,7 +15,6 @@ session_start();
         <br>
         <p>
         Liste des nouvelles fonctions à venir<br>
-        - donner la possibilité de laisser un commentaire (base de donnée messagerie)<br>
         - tableau de données piscine et filtres joints<br>
         - créer l'onglet LoraWan en lien avec un capteur<br>
         - ...<br>

@@ -1,5 +1,4 @@
 <?php 
-session_start();
 include("ConnexionSQL.php"); // pour ouvrir la base
 	
 // Insertion du message à l'aide d'une requête préparée

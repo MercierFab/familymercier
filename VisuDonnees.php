@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<html lang="fr">
 <!-- L'objectif de cette page est d'afficher toutes les données disponibles pour la piscine -->
     <head>
         <meta charset="utf-8" />

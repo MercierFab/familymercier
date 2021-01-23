@@ -1,10 +1,3 @@
-<?php 
-session_start();
-$_SESSION['nom'] = 'MERCIER';
-setcookie('pseudo','à venir', time() + 365*24*3600, null, null, false, true);
-
-?>
-
 <!DOCTYPE html>
 <!-- Site familymercier.com commencé le 7 novembre 2020 par Fabrice Mercier
 L'objectif est purement pédagogique et de passer du site statique au site dynamique
@@ -37,7 +30,7 @@ nouvelle version V.2 en PHP -->
                         <?php
                         include("ConnexionSQL.php"); // pour ouvrir la base
                         // On récupère les 10 derniers enregistrements de la table minichat, trié par ordre décrossant
-                        $reponse = $bdd->query('SELECT * FROM minichat order by ID DESC LIMIT 0, 10');
+                        $reponse = $bdd->query('SELECT * FROM minichat order by ID DESC LIMIT 0, 15');
                         ?>
                         <table>
                         <tr>
