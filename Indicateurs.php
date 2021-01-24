@@ -89,39 +89,6 @@ session_start();
 
             </article>
         
-
-
-        <aside>
-            <form method="post" action="traitement.php">
-                    <br /><br/>...en chantier...<br>
-
-                    <br /><br />
-                    <textarea class="boiteTrad" name="traduction" id="traduction">...</textarea>
-                    <br /><br />
-                    <input type="checkbox" name="genreF" id="genreF"/><label for="genreF">fini</label>
-                    <input type="checkbox" name="genreM" id="genreM"/><label2 for="genreFM">pas fini</label2><br /><br />
-            
-                    <!-- <label for="pays">Dans quel pays habitez-vous ?</label>
-                    <select name="pays" id="pays">
-                        <optgroup label="Europe">
-                            <option value="france">France</option>
-                            <option value="espagne">Espagne</option>
-                            <option value="italie">Italie</option>
-                            <option value="royaume-uni">Royaume-Uni</option>
-                        </optgroup>
-                        <optgroup label="Amérique">
-                            <option value="canada">Canada</option>
-                            <option value="etats-unis">Etats-Unis</option>
-                            </optgroup>
-                            <optgroup label="Asie">
-                            <option value="chine">Chine</option>
-                            <option value="japon">Japon</option>
-                        </optgroup>
-                    </select>
-                    <br><br> -->
-                <input type="submit" name="envoyer">
-            </form>
-            </aside>
         </section>
         <!-- pied de page commun-->
         <?php include("footer.php"); ?>

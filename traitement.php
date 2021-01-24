@@ -1,36 +1,23 @@
+<!-- L'objectif de cette page est d'autoriser l'acces aux autres pages du site
+vérifier que le nom qui vient d'index comporte au moins trois lettres différentes puis on accède à la page Indicateur avec le menu général
+si le nom est infosite alors on voit au passage les statistiques d'utilisation du site
+dans tous les cas on mémorise l'adresse IP du visiteur, son nom, la date et l'heure dans la table ConnexionsAuSite de la base familymercier -->
+
 
 <!DOCTYPE html>
 <html>
     <head>
         <meta charset="utf-8" />
         <link rel="stylesheet" href="stylePourFamilyMercier.css" />
-        <title>traitement php</title>
+        <title>infos site</title>
     </head>
-	<p>Si vous voyez cette page c'est que vous n'avez pas le bon pseudo ou le bon mot de passe</p>
 
     <p>            
-        <?php echo 'pseudo entré : ' . $_POST['pseudo']; ?> 
-        <br>
-        <?php echo 'mot de passe entré : ' . $_POST['pass']; ?>
-        <br>
-        <p>
-
-        Liste des nouvelles fonctions à venir<br>
-        - tableau de données piscine et filtres joints<br>
-        - créer l'onglet LoraWan en lien avec un capteur<br>
-        - ...<br>
+        <?php echo 'pseudo entré : ' . $_POST['pseudo'] . '<br>'; 
 
 
-        </p>
-
-
-	</p>
-	<!-- Je vais vérifier que le pseudo et le mot de passe existent dans une table avec correspondance, un pseudo avec en face le pass qui sera par défaut avec la même valeur. Et si je touve une correspondance j'envoie vers page 1. Si non retour à l'index avec un message "pseudo ou mot de passe inconnu" - Je renforcerai la sécurité dans un second temps  -->
-	<?php
-  
-
-	// récupération de l'adresse IP du visiteur
-  	function getIp(){
+        // fonction récupération de l'adresse IP du visiteur
+  		function getIp(){
     	if(!empty($_SERVER['HTTP_CLIENT_IP'])){
       		$ip = $_SERVER['HTTP_CLIENT_IP'];
     	}elseif(!empty($_SERVER['HTTP_X_FORWARDED_FOR'])){
@@ -40,51 +27,70 @@
     	}
     	return $ip;
   		}
+        
+        //<!-- tester la validité du nom rentré : au moins trois lettres et rester sur la page pour voir toutes les infos si nom "infosite" -->
+        if (strlen($_POST['pseudo'])>3) {
+        	
+        	// si le nom est valide, j'incrémente le nombre de vues
+        	$monfichier = fopen('compteur.txt', 'r+');
+			$pages_vues = fgets($monfichier); // On lit la première ligne (nombre de pages vues)
+			$pages_vues += 1; // On augmente de 1 ce nombre de pages vues
+			fseek($monfichier, 0); // On remet le curseur au début du fichier
+			fputs($monfichier, $pages_vues); // On écrit le nouveau nombre de pages vues
+ 			fclose($monfichier);
+			echo '<p>Cette page a été ouverte ' . $pages_vues . ' fois </p>';
 
-  	echo 'L adresse IP de l utilisateur est : '.getIp();
+			// je récupère l'adresse IP du visiteur
+			echo 'L adresse IP de l utilisateur est : '. getIp() . '<br>';
 
+			// je mets à jour le cookie
+			setcookie('pseudo',$_POST['pseudo'], time() + 365*24*3600, null, null, false, true);
 
+			// j'ouvre la base
+			include("ConnexionSQL.php");
+						
+			//faire une pause si le nom est "infosite", ne pas enregistrer les coordonnées du visiteur
+			// présenter les données de la base et donner le choix de la redirection
+			if($_POST['pseudo']=='infosite') {
 
+				$reponse = $bdd->query('SELECT * FROM ConnexionsAuSite order by ID DESC LIMIT 0, 15');
+                ?>
+                <table>
+                    <tr>
+                        <th width="80">nom</th>
+                        <th width="300">IPadress</th>
+                        <th width="300">DateConnexion</th>
+                    </tr>
+                 <?php
+                    while ($donnees = $reponse->fetch())
+                    {
+                        echo '<tr><td>' . htmlspecialchars($donnees['nom']) . '</td><td>' . htmlspecialchars($donnees['IPadress']) . 
+                        '</td><td>' . htmlspecialchars($donnees['DateConnexion']) . '</td></tr>';
+                    }
+                        
+                echo '</table>';
+                $reponse->closeCursor(); // Termine le traitement de la requête
 
-	$monfichier = fopen('compteur.txt', 'r+');
-	$pages_vues = fgets($monfichier); // On lit la première ligne (nombre de pages vues)
-	$pages_vues += 1; // On augmente de 1 ce nombre de pages vues
-	fseek($monfichier, 0); // On remet le curseur au début du fichier
-	fputs($monfichier, $pages_vues); // On écrit le nouveau nombre de pages vues
- 	fclose($monfichier);
-	echo '<p>Cette page a été ouverte ' . $pages_vues . ' fois </p>';
+				echo "<li><a href=\"index.php\">Accueil</a></li>";
+				echo "<li><a href=\"Indicateurs.php\">Indicateurs</a></li>";
+				exit();
+			} else {
 
+				// si le nom est valide on va directement à la page indicateur et on enregistre les données du visiteur
+				$req = $bdd->prepare('INSERT INTO ConnexionsAuSite(nom, IPadress) VALUES(?, ?)');
+				$req->execute(array($_POST['pseudo'], getIp()));
+				header('location:Indicateurs.php');
+				exit();
+			}
+        }
+        // si le nom n'est pas bon retour à l'index
+        header('location:index.php');
+		exit();
 
-	$TablePseudo = array('fabrice');
-	$TablePass = array('fabrice');
-	$okConnection = false;
+        ?> 
 
-	echo "liste des pseudos et mots de passes autorisés : <br>";
+        
 
-	for ($numero = 0; $numero < 1; $numero++)
-		{
-    	echo $TablePseudo[$numero] . '  ' . $TablePass[$numero] . '<br />';
-    	
-    		if ($TablePseudo[$numero] == $_POST['pseudo'] & $TablePass[$numero] == $_POST['pass']) 
-    		{
-    			$okConnection = true; 
-    			$nom = $TablePseudo[$numero];
-    			setcookie('pseudo', $nom, time() + 365*24*3600, null, null, false, true);
-    		}
-		}
-
-	if ($okConnection) {
-			
-			header('location:Indicateurs.php');
-			exit();
-		} else {
-			echo "retourner à l'accueil pour recommencer la connexion <br /><br />";
-			echo "<li><a href=\"index.php\">Accueil</a></li>";
-			exit();
-		}
-
-	?>
-
-
+	
 
 

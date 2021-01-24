@@ -6,8 +6,17 @@ setcookie('pseudo','---', time() + 365*24*3600, null, null, false, true);
 
 <!DOCTYPE html>
 <!-- Site familymercier.com commencé le 7 novembre 2020 par Fabrice Mercier
-L'objectif est purement pédagogique et de passer du site statique au site dynamique
-nouvelle version V.2 en PHP --> 
+les futures évolutions envisagées :
+- gérer et mémoriser les acces
+- sécuriser le site https... aller plus loin
+- gérer correctement les cookies sans le réeffacer
+- orienter le site vers Lora... ça doit devenir l'atractivité
+- jointer les bases
+- arriver à calculer un temps entre chaque enregistrement
+- faire du code Python (courbes?)
+- code script ?
+- automatiser le test du code (si c'est possible)
+--> 
 <html lang="fr">
     <head>
         <meta charset="utf-8" />
@@ -35,7 +44,7 @@ nouvelle version V.2 en PHP -->
                 </div>
             </div>
         
-            <section><!-- Section 2 je suis un grand voyageur-->    
+            <section>   
                 <article>
                 
                     <h1><img src="images/logoV.png" alt="logo V" width="50" height="50" class="ico_categorie" />Un site pédagogique</h1>
@@ -47,25 +56,25 @@ nouvelle version V.2 en PHP -->
                         <p>Sans oublier la dose de sécurité indispensable.</p>
                         <p>L'ensemble des programmes est disponible sur Github.</p>
                         <p>Les données utilisées sont celles d'une piscine.</p> 
-                        <p>En attendant des règles de sécurité plus strictes, vous pouvez utiliser le pseudo fabrice et mot de passe fabrice pour vous connecter.</p>
+                        </p>
                     
 
                 </article>
                 <aside>
                     <h1>Connectez-vous<br>
-                        <?php echo $_COOKIE['pseudo']; ?></h1>
-                        <!-- Objectif : se connecter à la page 1 qui contient le menu que si l'identifiant est manon/maeva/noemie/marie/fabrice et le mot de passe correspondant au prenom. Si c'est pas bon la page 1 renvoie à l'index avec un message "identifiant ou mot de passe inconnu" -->
+                    <?php echo $_COOKIE['pseudo']; ?></h1>    
                     <form method="post" action="traitement.php">
-                    <label for="pseudo">votre pseudo</label><br>
-                    <input type="text" name="pseudo" id="pseudo" placeholder="fabrice" size="30" maxlength="10" autofocus />
+                    <label for="pseudo">Votre nom ?</label><br>
+                    <input type="text" name="pseudo" id="pseudo" placeholder="infosite" size="30" maxlength="10" autofocus />
                     <br><br><br>
+                    <!-- on va oublier temporairement le mot de passe
                     <label for="pass">mot de passe</label><br>
-                    <input type="password" name="pass" id="pass" size="30" maxlength="10"/><br><br>
+                    <input type="password" name="pass" id="pass" size="30" maxlength="10"/><br><br>-->
                     
-                <input type="submit" name="envoyer"><br>
-            </form>
+                    <input type="submit" name="envoyer"><br>
+                    </form>
 
-            </aside>
+                </aside>
             </section>
 
              <?php include("footer.php"); ?>

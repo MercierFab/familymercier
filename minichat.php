@@ -50,19 +50,19 @@ nouvelle version V.2 en PHP -->
                 </article>
                 <aside>
                     <h1>Connectez-vous<br>
-                        <?php echo $_COOKIE['pseudo']; ?></h1>
-                        <!-- Objectif : se connecter à la page 1 qui contient le menu que si l'identifiant est manon/maeva/noemie/marie/fabrice et le mot de passe correspondant au prenom. Si c'est pas bon la page 1 renvoie à l'index avec un message "identifiant ou mot de passe inconnu" -->
+                    <?php echo $_COOKIE['pseudo']; ?></h1>    
                     <form method="post" action="traitement.php">
-                    <label for="pseudo">votre pseudo</label><br>
-                    <input type="text" name="pseudo" id="pseudo" placeholder="fabrice" size="30" maxlength="10" autofocus />
+                    <label for="pseudo">Votre nom ?</label><br>
+                    <input type="text" name="pseudo" id="pseudo" placeholder="nom" size="30" maxlength="10" autofocus />
                     <br><br><br>
+                    <!-- on va oublier temporairement le mot de passe
                     <label for="pass">mot de passe</label><br>
-                    <input type="password" name="pass" id="pass" size="30" maxlength="10"/><br><br>
+                    <input type="password" name="pass" id="pass" size="30" maxlength="10"/><br><br>-->
                     
-                <input type="submit" name="envoyer"><br>
-            </form>
+                    <input type="submit" name="envoyer"><br>
+                    </form>
 
-            </aside>
+                </aside>
             </section>
 
              <?php include("footer.php"); ?>

@@ -3,7 +3,7 @@
 
 			<footer>
                 <div id="miseAjour">
-                    <p>V3.01 du 23/01/21<br />
+                    <p>V3.02 du 24/01/21<br />
                     <!-- faire ici un lien pour laisser un commentaire -->
                     <a href="minichat.php">Laissez un message</a><br>
                     <a href="minichat_failleXSS.php">Laissez un message (faille XSS)</a>
