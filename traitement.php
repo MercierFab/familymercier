@@ -14,6 +14,7 @@
         <?php echo 'mot de passe entré : ' . $_POST['pass']; ?>
         <br>
         <p>
+
         Liste des nouvelles fonctions à venir<br>
         - tableau de données piscine et filtres joints<br>
         - créer l'onglet LoraWan en lien avec un capteur<br>
@@ -26,6 +27,24 @@
 	</p>
 	<!-- Je vais vérifier que le pseudo et le mot de passe existent dans une table avec correspondance, un pseudo avec en face le pass qui sera par défaut avec la même valeur. Et si je touve une correspondance j'envoie vers page 1. Si non retour à l'index avec un message "pseudo ou mot de passe inconnu" - Je renforcerai la sécurité dans un second temps  -->
 	<?php
+  
+
+	// récupération de l'adresse IP du visiteur
+  	function getIp(){
+    	if(!empty($_SERVER['HTTP_CLIENT_IP'])){
+      		$ip = $_SERVER['HTTP_CLIENT_IP'];
+    	}elseif(!empty($_SERVER['HTTP_X_FORWARDED_FOR'])){
+      		$ip = $_SERVER['HTTP_X_FORWARDED_FOR'];
+    	}else{
+      		$ip = $_SERVER['REMOTE_ADDR'];
+    	}
+    	return $ip;
+  		}
+
+  	echo 'L adresse IP de l utilisateur est : '.getIp();
+
+
+
 
 	$monfichier = fopen('compteur.txt', 'r+');
 	$pages_vues = fgets($monfichier); // On lit la première ligne (nombre de pages vues)
