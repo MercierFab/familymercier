@@ -7,7 +7,7 @@ setcookie('pseudo','---', time() + 365*24*3600, null, null, false, true);
 <!DOCTYPE html>
 <!-- Site familymercier.com commencé le 7 novembre 2020 par Fabrice Mercier
 les futures évolutions envisagées :
-- gérer et mémoriser les acces
+- gérer et mémoriser les acces à fignoler... mais ça fonctionne
 - sécuriser le site https... aller plus loin
 - gérer correctement les cookies sans le réeffacer
 - orienter le site vers Lora... ça doit devenir l'atractivité
@@ -61,7 +61,7 @@ les futures évolutions envisagées :
 
                 </article>
                 <aside>
-                    <h1>Connectez-vous<br>
+                    <h1>Identifiez-vous<br>
                     <?php echo $_COOKIE['pseudo']; ?></h1>    
                     <form method="post" action="traitement.php">
                     <label for="pseudo">Votre nom ?</label><br>
@@ -77,7 +77,42 @@ les futures évolutions envisagées :
                 </aside>
             </section>
 
-             <?php include("footer.php"); ?>
+            <footer>
+                <div id="miseAjour">
+                    <p>V3.02 du 24/01/21<br/>
+                    <a href="#" title="Identifiez vous pour laisser un commentaire">Laissez un message</a><br>
+                    <a href="#" title="Identifiez vous pour laisser un commentaire">Laissez un message (faille XSS)</a>
+                    <br>
+                    <br>identifiez vous pour 
+                    <br> laisser un message
+                    </p>
+
+                </div>
+                <div id="mes_photos">
+                    <h1>Pour s'évader</h1>
+                        <p>
+                        <img src="images/photo1.jpeg" alt="logo V" width="100" height="100" class="mesPhotos" />
+                        <img src="images/photo2mini.jpeg" alt="logo V" width="100" height="100" class="mesPhotos" />
+                        <img src="images/photo3mini.jpeg" alt="logo V" width="100" height="100" class="mesPhotos" />
+                        <img src="images/photo4mini.jpeg" alt="logo V" width="100" height="100" class="mesPhotos" />
+                        </p>    
+                    
+                </div>
+                <div id="Recommandes"> <!-- = mes_amis -->
+                    <h1>Liens utiles</h1>
+                        <div id="listeSites"> <!-- = listes_amis -->
+                        <ul>    
+                            <li><a href="https://github.com/MercierFab">github</a></li>
+                            <li><a href="https://www.thethingsnetwork.org">thethingsnetwork</a></li>
+                            <li><a href="http://localhost:8888/phpMyAdmin/tbl_structure.php?server=1&db=FamilyMercier&table=Piscine">phpMyAdmin</a></li>    
+                        </ul>
+                        <ul>
+                            <li><a href="https://openclassrooms.com/fr/dashboard/courses">Openclassrooms</a></li>
+                            <li><a href="https://www.fun-mooc.fr">Mooc</a></li>
+                        </ul>
+                    </div> 
+                </div>
+            </footer>
         
         </div>
     </body>

@@ -11,7 +11,17 @@ nouvelle version V.2 en PHP -->
 
     <body>
         <div id="blocPage"> <!-- Le bloc principal (main_wrapper) qui englobe l'ensemble de la page, permettra de centrer la page-->
-            
+         <header>
+            <div id="titrePrincipal">
+            <div id="logo">
+            <h1>Messages<br></h1>
+            <p><br><p>
+            </div>
+            </div>
+    
+            <?php include("menu.php"); ?>
+    
+        </header>   
         
             <section>
                 <article>
@@ -48,21 +58,6 @@ nouvelle version V.2 en PHP -->
                         </p>
 
                 </article>
-                <aside>
-                    <h1>Connectez-vous<br>
-                    <?php echo $_COOKIE['pseudo']; ?></h1>    
-                    <form method="post" action="traitement.php">
-                    <label for="pseudo">Votre nom ?</label><br>
-                    <input type="text" name="pseudo" id="pseudo" placeholder="nom" size="30" maxlength="10" autofocus />
-                    <br><br><br>
-                    <!-- on va oublier temporairement le mot de passe
-                    <label for="pass">mot de passe</label><br>
-                    <input type="password" name="pass" id="pass" size="30" maxlength="10"/><br><br>-->
-                    
-                    <input type="submit" name="envoyer"><br>
-                    </form>
-
-                </aside>
             </section>
 
              <?php include("footer.php"); ?>

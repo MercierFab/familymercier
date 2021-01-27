@@ -26,30 +26,19 @@ session_start();
             <article>
 
             <h2>Bonjour <?php echo $_COOKIE['pseudo']; ?>!</h2>
-            <p>
-            <li><a href="https://www.elsys.se/shop/my-account/view-order/4382/">Il est où le capteur?</a></li>
-            
+            <p>L'objectif est de connecter le capteur à la base de données en utilisant le réseau Lorawan.
+            <br>Un vrai challenge!
+            <br>
+
+            <!--<li><a href="#">...</a></li> -->
+            <br>
+            <img src="images/lorawan.png" alt="logo V" width="750" height="500" class="mesPhotos" />
+
             </p>
 
 
             </article>
         
-
-
-        <aside>
-            <form method="post" action="traitement.php">
-                    <br /><br/>...en chantier...<br>
-
-                    <br /><br />
-                    <textarea class="boiteTrad" name="traduction" id="traduction">...</textarea>
-                    <br /><br />
-                    <input type="checkbox" name="genreF" id="genreF"/><label for="genreF">fini</label>
-                    <input type="checkbox" name="genreM" id="genreM"/><label2 for="genreFM">pas fini</label2><br /><br />
-            
-                    
-                <input type="submit" name="envoyer">
-            </form>
-            </aside>
         </section>
         <!-- pied de page commun-->
         <?php include("footer.php"); ?>
