@@ -7,10 +7,8 @@
     </head>
     <header>
         <div id="titrePrincipal">
-        <div id="logo">
         <h1>Toutes les données disponibles<br></h1>
-        <p><br><p>
-        </div>
+        <a href="saisiePiscine.php">Enregistrer des données</a><br>
         </div>
     
         <?php include("menu.php"); ?>

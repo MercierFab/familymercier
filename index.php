@@ -1,15 +1,21 @@
 <?php 
 session_start();
 //$_SESSION['nom'] = 'MERCIER';
+// vérifier si le cookie existe avant de le créer
+if(isset($_COOKIE['pseudo']))
+{
+}
+else
+{
 setcookie('pseudo','---', time() + 365*24*3600, null, null, false, true);
+}
+
 ?>
 
 <!DOCTYPE html>
 <!-- Site familymercier.com commencé le 7 novembre 2020 par Fabrice Mercier
 les futures évolutions envisagées :
 - gérer et mémoriser les acces à fignoler... mais ça fonctionne
-- sécuriser le site https... aller plus loin
-- gérer correctement les cookies sans le réeffacer
 - orienter le site vers Lora... ça doit devenir l'atractivité
 - jointer les bases
 - arriver à calculer un temps entre chaque enregistrement
@@ -65,7 +71,7 @@ les futures évolutions envisagées :
                     <?php echo $_COOKIE['pseudo']; ?></h1>    
                     <form method="post" action="traitement.php">
                     <label for="pseudo">Votre nom ?</label><br>
-                    <input type="text" name="pseudo" id="pseudo" placeholder="infosite" size="30" maxlength="10" autofocus />
+                    <input type="text" name="pseudo" id="pseudo" placeholder="nom" size="30" maxlength="30" autofocus />
                     <br><br><br>
                     <!-- on va oublier temporairement le mot de passe
                     <label for="pass">mot de passe</label><br>
