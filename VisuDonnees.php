@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<!-- L'objectif de cette page est d'afficher toutes les données disponibles pour la piscine -->
+<!-- L'objectif de cette page est d'afficher toutes les données disponibles pour la piscine classé par date
+il est aussi possible d'accéder à la page pour créer un enregistrement  -->
     <head>
         <meta charset="utf-8" />
         <link rel="stylesheet" href="stylePourFamilyMercier.css" />
@@ -18,9 +19,6 @@
 		<br><br>
 		<?php
 		
-		// On se connecte à MySQL - test = nom de la base - root l'utilisateur - Los.. le mot de passe - array... pour avoir les erreurs en retour - PDO est un mode de connection universel
-
-		// ça marche : $host = 'sql151.main-hosting.eu'; $dbname = 'u477330510_familymercier'; $username = 'u477330510_familymercier'; $password = 'ZozoEstParti76';
 		include("ConnexionSQL.php");
 		
 		// On récupère tout le contenu de la table Piscine
@@ -49,7 +47,7 @@
     		'<tr><td>' . $donnees['Date'] . '</td><td>' . $donnees['NiveauEau'] . ' mm' . '</td><td>' . $donnees['ClMesure'] 
     		. '</td><td>' . $donnees['PhMesure'] . '</td><td>' . $donnees['TempEau'] . '°' . '</td><td>' . $donnees['TpsPompe'] . ' h'
     		. '</td><td>' . $donnees['AjoutCl'] . '</td><td>' . $donnees['PlusPh'] . '</td><td>' . $donnees['MoinsPh'] 
-    		. '</td><td>' . $donnees['AjoutEau'] .' mm' . '</td><td>' . $donnees['NumFiltre'] . '</td><td>' . $donnees['Remarque']
+    		. '</td><td>' . $donnees['AjoutEau'] .' mm' . '</td><td>' . $donnees['NumFiltre'] . '</td><td>' . htmlspecialchars($donnees['Remarque'])
     		. '</td></tr>';
 		}
 		echo '</table>';
