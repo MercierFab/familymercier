@@ -3,8 +3,7 @@
 
 			<footer>
                 <div id="miseAjour">
-                    <p>V3.02 du 24/01/21<br />
-                    <!-- faire ici un lien pour laisser un commentaire -->
+                    <p><br/>
                     <a href="minichat.php">Laissez un message</a><br>
                     <a href="minichat_failleXSS.php">Laissez un message (faille XSS)</a>
                     </p>
@@ -20,9 +19,9 @@
                         </p>    
                     
                 </div>
-                <div id="Recommandes"> <!-- = mes_amis -->
+                <div id="Recommandes">
                     <h1>Liens utiles</h1>
-                        <div id="listeSites"> <!-- = listes_amis -->
+                        <div id="listeSites">
                         <ul>    
                             <li><a href="https://github.com/MercierFab">github</a></li>
                             <li><a href="https://www.thethingsnetwork.org">thethingsnetwork</a></li>
@@ -31,6 +30,7 @@
                         <ul>
                             <li><a href="https://openclassrooms.com/fr/dashboard/courses">Openclassrooms</a></li>
                             <li><a href="https://www.fun-mooc.fr">Mooc</a></li>
+                            <li><a href="https://www.exploit-db.com">Failles XSS</a></li>
                         </ul>
                     </div> 
                 </div>

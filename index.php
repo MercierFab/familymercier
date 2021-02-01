@@ -56,13 +56,12 @@ les futures évolutions envisagées :
                     <h1><img src="images/logoV.png" alt="logo V" width="50" height="50" class="ico_categorie" />Un site pédagogique</h1>
 
 
-                        <p>L'objectif est de tester les langages et méthodes qui permettent de faire vivre un site Internet interactif. </p>
-                        <p>Pour commencer le HTML et CSV pour l'affichage et la mise en page. Puis le PHP, SQL et Python pour travailler les données et rendre le site interessant.</p>
-                        <p>L'objectif ultime est d'alimenter une base de données directement par un capteur accessible par le réseau LORAWan. Le tout hébergé sur un serveur et accessible depuis n'importe quel ordinateur.</p>
-                        <p>Sans oublier la dose de sécurité indispensable.</p>
+                        <p>L'objectif est de tester les langages et méthodes qui permettent de faire vivre un site Internet. </p>
+                        <p>Pour commencer le HTML et CSV pour l'affichage et la mise en page. </p>
+                        <p>Puis le PHP, SQL et Python pour travailler les données.</p>
+                        <p>L'objectif ultime est d'alimenter une base de données directement par un capteur accessible par le réseau LORAWan. </p>
                         <p>L'ensemble des programmes est disponible sur Github.</p>
-                        <p>Les données utilisées sont celles d'une piscine.</p> 
-                        </p>
+                        <p>Les données utilisées sont celles d'une piscine.</p>
                     
 
                 </article>
@@ -85,7 +84,7 @@ les futures évolutions envisagées :
 
             <footer>
                 <div id="miseAjour">
-                    <p>V3.02 du 24/01/21<br/>
+                    <p>
                     <a href="#" title="Identifiez vous pour laisser un commentaire">Laissez un message</a><br>
                     <a href="#" title="Identifiez vous pour laisser un commentaire">Laissez un message (faille XSS)</a>
                     <br>
@@ -102,21 +101,6 @@ les futures évolutions envisagées :
                         <img src="images/photo3mini.jpeg" alt="logo V" width="100" height="100" class="mesPhotos" />
                         <img src="images/photo4mini.jpeg" alt="logo V" width="100" height="100" class="mesPhotos" />
                         </p>    
-                    
-                </div>
-                <div id="Recommandes"> <!-- = mes_amis -->
-                    <h1>Liens utiles</h1>
-                        <div id="listeSites"> <!-- = listes_amis -->
-                        <ul>    
-                            <li><a href="https://github.com/MercierFab">github</a></li>
-                            <li><a href="https://www.thethingsnetwork.org">thethingsnetwork</a></li>
-                            <li><a href="http://localhost:8888/phpMyAdmin/tbl_structure.php?server=1&db=FamilyMercier&table=Piscine">phpMyAdmin</a></li>    
-                        </ul>
-                        <ul>
-                            <li><a href="https://openclassrooms.com/fr/dashboard/courses">Openclassrooms</a></li>
-                            <li><a href="https://www.fun-mooc.fr">Mooc</a></li>
-                        </ul>
-                    </div> 
                 </div>
             </footer>
         
