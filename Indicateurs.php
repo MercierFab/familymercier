@@ -80,7 +80,12 @@ session_start();
                 echo '</table>';
 
                 $reponse->closeCursor(); // Termine le traitement de la requête
-                ?>  
+
+                // test de lancement d'un prog python
+                exec("python python/courbePiscine.py" , $output);
+                echo '<br>' . $output[0];
+                echo '<br>' . $output[1];
+                ?>       
 
             </article>
         
