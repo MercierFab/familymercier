@@ -19,7 +19,7 @@ try
 
 		$dbname = 'u477330510_familymercier'; 
 		$username = 'u477330510_familymercier'; 
-		$password = 'xxxxxxxxxx';
+		$password = 'xxxxxxxxxx'; // à mettre à jour lors de l'importation
 
 		$bdd = new PDO("mysql:host=$host;dbname=$dbname" , $username, $password);
 		$bdd->setAttribute(PDO::ATTR_ERRMODE , PDO::ERRMODE_EXCEPTION);
